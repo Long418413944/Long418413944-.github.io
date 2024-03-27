@@ -1,3 +1,18 @@
+var billTotalInput = document.getElementById("billTotal");
+var errorMessage = document.getElementById("error-message");
+
+billTotalInput.addEventListener("blur", function() {
+  var billTotal = billTotalInput.value.trim();
+  
+  if (billTotal === "") {
+    errorMessage.textContent = "";
+  } else if (!/^[0-9.]+$/.test(billTotal)) {
+    errorMessage.textContent = "Please enter a valid number.";
+  } else {
+    errorMessage.textContent = "";
+  }
+});
+
 document.addEventListener('DOMContentLoaded', function() {
   const tipForm = document.getElementById('tipForm');
   const billTotalInput = document.getElementById('billTotal');
