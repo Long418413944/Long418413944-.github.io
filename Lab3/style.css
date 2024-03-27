@@ -24,33 +24,40 @@ label {
   margin-right: 20px;
 }
 
-input[type="text"],
-input[type="range"] {
-  flex: 3;
-  padding: 8px;
-  font-size: 16px;
-  border: 1px solid #ccc;
+input[type="text"]{
+    flex: 3;
+    font-size: 16px;
+    padding: 8px 0px 8px 0px;
+    border: 1px solid #ccc;
 }
 
 input[type="range"] {
+  flex: 3;
+  margin: 8px 0px 8px 0px;
   -webkit-appearance: none;
+  background-color:transparent ;
+  border: none;
 }
 
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
-  width: 16px;
   height: 16px;
+  width: 16px;
   border-radius: 50%;
-  background-color: #007bff;
+  background-color: black;
   cursor: pointer;
+  margin-top: -5.5px;
 }
 
-input[type="range"]::-webkit-slider-thumb:hover {
-  background-color: #0056b3;
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 5px;
+  background-color: black;
+  border-radius: 5px;
 }
 
-input[type="text"][disabled],
-input[type="range"][disabled] {
+
+
+input[type="text"][disabled] {
   background-color: #f5f5f5;
   cursor: not-allowed;
 }
